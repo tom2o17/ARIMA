@@ -16,8 +16,10 @@ as.Date(date.current)
 stock.ls <- list()
 
 
+# Insert Securities you would like to see price forecasts for here
+tick.v <- c("AMC", "PLTR", "SPY")
 
-tick.v <- c("AMC")
+
 for (i in 1:length(tick.v)){
   x <- getSymbols(tick.v[i],src="yahoo",from="2013-05-10", to=date.current,
                   auto.assign = F)
